@@ -53,7 +53,7 @@ namespace Bakery.Models
       public void CalculatePastryPrice(int pastryCount)
       {
         int outputPastryPrice = PastryPrice;
-        if(pastryCount == 3)
+        if(pastryCount != 3)
         {
          outputPastryPrice = PastryPrice * pastryCount;
         }

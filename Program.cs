@@ -8,7 +8,7 @@ namespace Bakery
         static void Main()
         {
 					Bread newBread = new Bread(5);
-					// Pastry newPastry = new Pastry(2);
+					Pastry newPastry = new Pastry(2, "croissant");
 					newBread.MainMenu();
 					Console.WriteLine("Do you want pastries? [Y]/[N]");
 					string yesNo = Console.ReadLine();
@@ -18,7 +18,7 @@ namespace Bakery
 						Console.WriteLine("how much pastries would you like?");
 						string stringUserInputPastry = Console.ReadLine();
 						int userInputPastry = int.Parse(stringUserInputPastry);
-						// newPastry.CalculatePastryPrice(userInputPastry);
+						newPastry.CalculatePastryPrice(userInputPastry);
 					}
 					else
 					{
