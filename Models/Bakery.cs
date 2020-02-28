@@ -39,4 +39,25 @@ namespace Bakery.Models
       Console.WriteLine(outputPrice);
     }
     }
+
+    public class Pastry
+    {
+      public int PastryPrice { get; set; }
+       public string PastryType { get; set; }
+      public Pastry(int pastryPrice, string pastryType)
+      {
+        PastryPrice = pastryPrice;
+        PastryType = pastryType;
+      }
+
+      public void CalculatePastryPrice(int pastryCount)
+      {
+        int outputPastryPrice = PastryPrice;
+        if(pastryCount == 3)
+        {
+         outputPastryPrice = PastryPrice * pastryCount;
+        }
+         Console.WriteLine(outputPastryPrice);
+      }
+    }
   }

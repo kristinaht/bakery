@@ -20,6 +20,10 @@ namespace Bakery
 						int userInputPastry = int.Parse(stringUserInputPastry);
 						// newPastry.CalculatePastryPrice(userInputPastry);
 					}
+					else
+					{
+						Console.WriteLine("Goodbye.");
+					}
 				}
     }
 }
