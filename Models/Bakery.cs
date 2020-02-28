@@ -10,6 +10,14 @@ namespace Bakery.Models
     {
       Price = price;
     }
+
+    public void CalculateBreadPrice(int userInputCount)
+    {
+      if(userInputCount == 2)
+      {
+        Console.WriteLine(Price);
+      }
+    }
   }
 
   public class Pastry
