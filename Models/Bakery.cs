@@ -25,8 +25,8 @@ namespace Bakery.Models
       Console.WriteLine("How many loaves of bread for you?");
       string stringUserInputBread = Console.ReadLine();
       int userInputBread = int.Parse(stringUserInputBread);
-      // Console.WriteLine(userInputBread);
-      CalculateBreadPrice(userInputBread);
+      Console.WriteLine(userInputBread);
+      
 
     }
     public void CalculateBreadPrice(int userInputCount)
@@ -38,5 +38,14 @@ namespace Bakery.Models
       }
       Console.WriteLine(outputPrice);
     }
+    }
+
+    public class Pastry
+    {
+      public int Price { get; set; }
+
+      public Pastry(int price){
+        Price=price;
+      }
     }
   }
