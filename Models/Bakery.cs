@@ -4,39 +4,27 @@ namespace Bakery.Models
 {
   public class Bread
   {
-    public int Price { get; set; }
+    public int BreadPrice { get; set; }
 
     public Bread(int price)
     {
-      Price = price;
+      BreadPrice = price;
     }
 
-    // public void MainMenu()
-    // {
-      // Console.WriteLine(@"
-      //                     Welcome to Pierre's Bakery! 
-    
-      //                       MENU:
-      //                     Item      	Price
-      //                     Bread		$5
-      //                     Pastry		$2
-      //                                 ");
-      // Console.WriteLine("How many loaves of bread for you?");
-      // string stringUserInputBread = Console.ReadLine();
-      // int userInputBread = int.Parse(stringUserInputBread);
-      // // Console.WriteLine(userInputBread);
-      // CalculateBreadPrice(userInputBread);
-
-    // }
-    public void CalculateBreadPrice(int userInputCount)
+    public void CalculateBreadPrice()
     {
-      int outputPrice = Price;
-      if(userInputCount != 2)
+      int outputBreadPrice = BreadPrice;
+      Console.WriteLine("How many loaves of bread would you like?");
+      string stringUserInputBread = Console.ReadLine();
+      int userInputBread = int.Parse(stringUserInputBread);
+  
+      if(userInputBread != 2 )
       {
-        outputPrice = Price * userInputCount;
+        outputBreadPrice = outputBreadPrice * userInputBread; 
       }
-      Console.WriteLine(outputPrice);
+      Console.WriteLine(outputBreadPrice);
     }
+
     }
 
     public class Pastry
@@ -49,14 +37,18 @@ namespace Bakery.Models
         PastryType = pastryType;
       }
 
-      public void CalculatePastryPrice(int pastryCount)
+      public void CalculatePastryPrice()
       {
         int outputPastryPrice = PastryPrice;
-        if(pastryCount != 3)
+        Console.WriteLine("How many loaves of Pastry would you like?");
+        string stringUserInputPastry = Console.ReadLine();
+        int userInputPastry = int.Parse(stringUserInputPastry);
+    
+        if(userInputPastry != 2 )
         {
-         outputPastryPrice = PastryPrice * pastryCount;
+          outputPastryPrice = outputPastryPrice * userInputPastry; 
         }
-         Console.WriteLine(outputPastryPrice);
+        Console.WriteLine(outputPastryPrice);
       }
     }
   }

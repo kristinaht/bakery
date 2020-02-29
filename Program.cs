@@ -7,7 +7,8 @@ namespace Bakery
     {
         static void Main()
         {
-					Bread newBread = new Bread(5);
+					int breadPrice = 5;
+					Bread newBread = new Bread(breadPrice);
 					Pastry newPastry = new Pastry(2, "croissant");
 					// newBread.MainMenu();
 
@@ -23,25 +24,28 @@ namespace Bakery
 																[B] for just bread
 																[P] for just pastries
 																[BP] for both bread and pastries");
-					string stringUserInputBread = Console.ReadLine();
-					int userInputBread = int.Parse(stringUserInputBread);
-					// Console.WriteLine(userInputBread);
-					newBread.CalculateBreadPrice(userInputBread);
-					Console.WriteLine("Do you want pastries? [Y]/[N]");
-					string yesNo = Console.ReadLine();
-					string yesNoLower = yesNo.ToLower();
-					if (yesNoLower == "y")
+					string userInputMainPage = Console.ReadLine();
+					string userInputMainPageLower = userInputMainPage.ToLower();
+					if(userInputMainPageLower == "b")
 					{
-						Console.WriteLine("how much pastries would you like?");
-						string stringUserInputPastry = Console.ReadLine();
-						int userInputPastry = int.Parse(stringUserInputPastry);
-						newPastry.CalculatePastryPrice(userInputPastry);
+						
+						newBread.CalculateBreadPrice();
+					}
+					else if( userInputMainPageLower == "p")
+					{
+						newPastry.CalculatePastryPrice();
+					}
+					else if(userInputMainPageLower == "bp")
+					{
+						// CalculateBreadPastryPrice();
 					}
 					else
 					{
-						Console.WriteLine("Goodbye.");
+						// MainMenu();
 					}
+
 				}
+				
     }
 }
 
