@@ -40,10 +40,11 @@ namespace Bakery
 					Item      	Price
 					Bread		$5
 					Pastry		$2");
-					Console.WriteLine(@"We have bread fresh from the oven and delicous pastries. What would you like today?
-												[B] for just bread
-												[P] for just pastries
-												[BP] for both bread and pastries");
+					Console.WriteLine(@"
+					What would you like today?
+						[B] for just bread
+						[P] for just pastries
+						[BP] for both bread and pastries");
 				}
     }
 }
