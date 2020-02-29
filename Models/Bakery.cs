@@ -50,5 +50,6 @@ namespace Bakery.Models
         }
         Console.WriteLine(outputPastryPrice);
       }
+  
     }
   }

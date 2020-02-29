@@ -7,8 +7,8 @@ namespace Bakery
     {
         static void Main()
         {
-					int breadPrice = 5;
-					Bread newBread = new Bread(breadPrice);
+					
+					Bread newBread = new Bread(5);
 					Pastry newPastry = new Pastry(2, "croissant");
 					MainMenu();
 					string userInputMainPage = Console.ReadLine();
@@ -24,7 +24,8 @@ namespace Bakery
 					}
 					else if(userInputMainPageLower == "bp")
 					{
-						// CalculateBreadPastryPrice();
+						int totalPrice = newBread.BreadPrice + newPastry.PastryPrice;
+						Console.WriteLine(totalPrice);
 					}
 					else
 					{
