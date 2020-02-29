@@ -37,18 +37,26 @@ namespace Bakery.Models
         PastryType = pastryType;
       }
 
+      public  int PastryMath(int userInputPastry, int outputPastryPrice)
+      {
+        if(userInputPastry !=2)
+        {
+           outputPastryPrice = outputPastryPrice * userInputPastry; 
+        }
+        return outputPastryPrice;
+      }
       public void CalculatePastryPrice()
       {
         int outputPastryPrice = PastryPrice;
         Console.WriteLine("How many loaves of Pastry would you like?");
         string stringUserInputPastry = Console.ReadLine();
         int userInputPastry = int.Parse(stringUserInputPastry);
-    
-        if(userInputPastry != 2 )
-        {
-          outputPastryPrice = outputPastryPrice * userInputPastry; 
-        }
-        Console.WriteLine(outputPastryPrice);
+        Console.WriteLine(PastryMath(userInputPastry, outputPastryPrice));
+        // if(userInputPastry != 2 )
+        // {
+        //   outputPastryPrice = outputPastryPrice * userInputPastry; 
+        // }
+        // Console.WriteLine(outputPastryPrice);
       }
   
     }
