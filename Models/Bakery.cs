@@ -11,6 +11,14 @@ namespace Bakery.Models
       BreadPrice = price;
     }
 
+    public int BreadMath(int userInputBread, int outputBreadPrice)
+    {
+      if(userInputBread != 2 )
+      {
+        outputBreadPrice = outputBreadPrice * userInputBread; 
+      }
+      return outputBreadPrice;
+    }
     public void CalculateBreadPrice()
     {
       int outputBreadPrice = BreadPrice;
@@ -18,11 +26,8 @@ namespace Bakery.Models
       string stringUserInputBread = Console.ReadLine();
       int userInputBread = int.Parse(stringUserInputBread);
   
-      if(userInputBread != 2 )
-      {
-        outputBreadPrice = outputBreadPrice * userInputBread; 
-      }
-      Console.WriteLine(outputBreadPrice);
+      int totalBreadPrice = BreadMath(userInputBread, outputBreadPrice);
+      Console.WriteLine("That will be $" + totalBreadPrice + ".");
     }
 
     }
@@ -51,12 +56,8 @@ namespace Bakery.Models
         Console.WriteLine("How many loaves of Pastry would you like?");
         string stringUserInputPastry = Console.ReadLine();
         int userInputPastry = int.Parse(stringUserInputPastry);
-        Console.WriteLine(PastryMath(userInputPastry, outputPastryPrice));
-        // if(userInputPastry != 2 )
-        // {
-        //   outputPastryPrice = outputPastryPrice * userInputPastry; 
-        // }
-        // Console.WriteLine(outputPastryPrice);
+        int totalPastryPrice = PastryMath(userInputPastry, outputPastryPrice);
+        Console.WriteLine("That will be $" + totalPastryPrice + ".");
       }
   
     }
