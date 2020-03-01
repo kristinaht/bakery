@@ -38,12 +38,22 @@ namespace Bakery
 				}
 				public static void MainMenu()
 				{
+					Console.BackgroundColor = ConsoleColor.DarkGray;
+					Console.ForegroundColor = ConsoleColor.Yellow;
 					Console.WriteLine(@"
-					Welcome to Pierre's Bakery! 
+					| |  | |    | |                          | |        | ___ (_)                  ( )     | ___ \     | |                  
+| |  | | ___| | ___ ___  _ __ ___   ___  | |_ ___   | |_/ /_  ___ _ __ _ __ ___|/ ___  | |_/ / __ _| | _____ _ __ _   _ 
+| |/\| |/ _ \ |/ __/ _ \| '_ ` _ \ / _ \ | __/ _ \  |  __/| |/ _ \ '__| '__/ _ \ / __| | ___ \/ _` | |/ / _ \ '__| | | |
+\  /\  /  __/ | (_| (_) | | | | | |  __/ | || (_) | | |   | |  __/ |  | | |  __/ \__ \ | |_/ / (_| |   <  __/ |  | |_| |
+ \/  \/ \___|_|\___\___/|_| |_| |_|\___|  \__\___/  \_|   |_|\___|_|  |_|  \___| |___/ \____/ \__,_|_|\_\___|_|   \__, |
+                                                                                                                   __/ |
+                                                                                                                  |___/ 
+
 						MENU:
 					Item      	Price
 					Bread		$5
 					Pastry		$2");
+					// Console.ResetColor();
 					Console.WriteLine(@"
 					What would you like today?
 						[B] for just bread
