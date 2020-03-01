@@ -13,9 +13,12 @@ namespace Bakery.Models
 
     public int SetBreadPrice(int userInputBread)
     {
-      if(userInputBread != 2 )
+      if(userInputBread %2 != 0 )
       {
         BreadPrice = BreadPrice * userInputBread; 
+      }
+      else{
+        BreadPrice = (BreadPrice * userInputBread)/2;
       }
       return BreadPrice;
     }

@@ -15,10 +15,12 @@ namespace Bakery
 					if(userInputMainPageLower == "b")
 					{
 						newBread.CalculateBreadPrice();
+						AnythingElse();
 					}
 					else if( userInputMainPageLower == "p")
 					{
 						newPastry.CalculatePastryPrice();
+						AnythingElse();
 					}
 					else if(userInputMainPageLower == "bp")
 					{
@@ -26,6 +28,7 @@ namespace Bakery
 						newPastry.CalculatePastryPrice();
 						int totalPrice = newBread.BreadPrice + newPastry.PastryPrice;
 						Console.WriteLine("Your total price for bread and pastry is $" + totalPrice);
+						AnythingElse();
 					}
 					else
 					{
@@ -48,9 +51,19 @@ namespace Bakery
 						[BP] for both bread and pastries");
 				}
 
-				public static void CalculateBreadPastryPrice()
+				public static void AnythingElse()
 				{
-					
+					Console.WriteLine("Would that be all for you today?");
+					string yesNo = Console.ReadLine();
+					string yesNoLower = yesNo.ToLower();
+					if(yesNoLower == "y")
+					{
+						Console.WriteLine("Thanks for stopping by! Bye now.");
+					}
+					else
+					{
+						Main();
+					}
 				}
     }
 }
