@@ -24,7 +24,9 @@ namespace Bakery
 					}
 					else if(userInputMainPageLower == "bp")
 					{
-						int totalPrice = newBread.BreadPrice + newPastry.PastryPrice;
+						newBread.CalculateBreadPrice();
+						newPastry.CalculatePastryPrice();
+						int totalPrice = newBread.BreadPrice;
 						Console.WriteLine(totalPrice);
 					}
 					else
