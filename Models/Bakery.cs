@@ -25,8 +25,8 @@ namespace Bakery.Models
       string stringUserInputBread = Console.ReadLine();
       int userInputBread = int.Parse(stringUserInputBread);
   
-      BreadPrice = SetBreadPrice(userInputBread);
-      Console.WriteLine("That will be $" + BreadPrice + ".");
+      SetBreadPrice(userInputBread);
+      Console.WriteLine("Your cost for the bread is $" + BreadPrice + ".");
     }
 
     }
@@ -41,21 +41,25 @@ namespace Bakery.Models
         PastryType = pastryType;
       }
 
-      public  int PastryMath(int userInputPastry, int outputPastryPrice)
+      public  int SetPastryPrice(int userInputPastry)
       {
-        if(userInputPastry !=2)
+        if(userInputPastry %3 !=0)
         {
-           outputPastryPrice = outputPastryPrice * userInputPastry; 
+           PastryPrice = PastryPrice * userInputPastry; 
         }
-        return outputPastryPrice;
+        else
+        {
+          PastryPrice = (int)(Math.Round(1.67f * userInputPastry));
+        }
+        return PastryPrice;
       }
       public void CalculatePastryPrice()
       {
         int outputPastryPrice = PastryPrice;
-        Console.WriteLine("How many loaves of Pastry would you like?");
+        Console.WriteLine("How many pieces of Pastry would you like?");
         string stringUserInputPastry = Console.ReadLine();
         int userInputPastry = int.Parse(stringUserInputPastry);
-        int totalPastryPrice = PastryMath(userInputPastry, outputPastryPrice);
+        int totalPastryPrice = SetPastryPrice(userInputPastry);
         Console.WriteLine("That will be $" + totalPastryPrice + ".");
       }
   

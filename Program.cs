@@ -7,7 +7,6 @@ namespace Bakery
     {
         static void Main()
         {
-					
 					Bread newBread = new Bread(5);
 					Pastry newPastry = new Pastry(2, "croissant");
 					MainMenu();
@@ -15,7 +14,6 @@ namespace Bakery
 					string userInputMainPageLower = userInputMainPage.ToLower();
 					if(userInputMainPageLower == "b")
 					{
-						
 						newBread.CalculateBreadPrice();
 					}
 					else if( userInputMainPageLower == "p")
@@ -26,8 +24,8 @@ namespace Bakery
 					{
 						newBread.CalculateBreadPrice();
 						newPastry.CalculatePastryPrice();
-						int totalPrice = newBread.BreadPrice;
-						Console.WriteLine(totalPrice);
+						int totalPrice = newBread.BreadPrice + newPastry.PastryPrice;
+						Console.WriteLine("Your total price for bread and pastry is $" + totalPrice);
 					}
 					else
 					{
@@ -48,6 +46,11 @@ namespace Bakery
 						[B] for just bread
 						[P] for just pastries
 						[BP] for both bread and pastries");
+				}
+
+				public static void CalculateBreadPastryPrice()
+				{
+					
 				}
     }
 }
