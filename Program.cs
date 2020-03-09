@@ -14,7 +14,12 @@ namespace Bakery
 					string userInputMainPageLower = userInputMainPage.ToLower();
 					if(userInputMainPageLower == "b")
 					{
-						newBread.CalculateBreadPrice();
+					Console.WriteLine("How many loaves of bread would you like?");
+					string stringUserInputBread = Console.ReadLine();
+					int userInputBread = int.Parse(stringUserInputBread);
+			
+					newBread.SetBreadPrice(userInputBread);
+					Console.WriteLine("Your cost for the bread is $" + newBread.BreadPrice + ".");
 						AnythingElse();
 					}
 					else if( userInputMainPageLower == "p")
@@ -24,7 +29,7 @@ namespace Bakery
 					}
 					else if(userInputMainPageLower == "bp")
 					{
-						newBread.CalculateBreadPrice();
+						// newBread.CalculateBreadPrice();
 						newPastry.CalculatePastryPrice();
 						int totalPrice = newBread.BreadPrice + newPastry.PastryPrice;
 						Console.WriteLine("Your total price for bread and pastry is $" + totalPrice);

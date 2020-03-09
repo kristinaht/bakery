@@ -22,15 +22,15 @@ namespace Bakery.Models
       }
       return BreadPrice;
     }
-    public void CalculateBreadPrice()
-    {
-      Console.WriteLine("How many loaves of bread would you like?");
-      string stringUserInputBread = Console.ReadLine();
-      int userInputBread = int.Parse(stringUserInputBread);
+    // public void CalculateBreadPrice()
+    // {
+    //   Console.WriteLine("How many loaves of bread would you like?");
+    //   string stringUserInputBread = Console.ReadLine();
+    //   int userInputBread = int.Parse(stringUserInputBread);
   
-      SetBreadPrice(userInputBread);
-      Console.WriteLine("Your cost for the bread is $" + BreadPrice + ".");
-    }
+    //   SetBreadPrice(userInputBread);
+    //   Console.WriteLine("Your cost for the bread is $" + BreadPrice + ".");
+    // }
   }
 
   public class Pastry
