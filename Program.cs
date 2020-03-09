@@ -34,8 +34,16 @@ namespace Bakery
 			}
 			else if(userInputMainPageLower == "bp")
 			{
-				// newBread.CalculateBreadPrice();
-				// newPastry.CalculatePastryPrice();
+				Console.WriteLine("How many loaves of bread would you like?");
+				string stringUserInputBread = Console.ReadLine();
+				int userInputBread = int.Parse(stringUserInputBread);
+				Console.WriteLine("How many pieces of Pastry would you like?");
+				string stringUserInputPastry = Console.ReadLine();
+				int userInputPastry = int.Parse(stringUserInputPastry);
+				int totalPastryPrice = newPastry.SetPastryPrice(userInputPastry);
+
+				newPastry.SetPastryPrice(userInputPastry);
+				newBread.SetBreadPrice(userInputBread);
 				int totalPrice = newBread.BreadPrice + newPastry.PastryPrice;
 				Console.WriteLine("Your total price for bread and pastry is $" + totalPrice);
 				AnythingElse();

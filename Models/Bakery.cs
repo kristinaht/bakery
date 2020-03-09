@@ -45,13 +45,10 @@ namespace Bakery.Models
 
     public  int SetPastryPrice(int userInputPastry)
     {
-      if(userInputPastry %3 !=0)
+      PastryPrice = 2;
+      if(userInputPastry == 3 )
       {
-          PastryPrice = PastryPrice * userInputPastry; 
-      }
-      else
-      {
-        PastryPrice = (int)(Math.Round(1.67f * userInputPastry));
+          PastryPrice = (userInputPastry * PastryPrice) - 1;
       }
       return PastryPrice;
     }
