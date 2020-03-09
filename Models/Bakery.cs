@@ -55,14 +55,14 @@ namespace Bakery.Models
       }
       return PastryPrice;
     }
-    public void CalculatePastryPrice()
-    {
-      int outputPastryPrice = PastryPrice;
-      Console.WriteLine("How many pieces of Pastry would you like?");
-      string stringUserInputPastry = Console.ReadLine();
-      int userInputPastry = int.Parse(stringUserInputPastry);
-      int totalPastryPrice = SetPastryPrice(userInputPastry);
-      Console.WriteLine("That will be $" + totalPastryPrice + ".");
-    }
+    // public void CalculatePastryPrice()
+    // {
+    //   int outputPastryPrice = PastryPrice;
+    //   Console.WriteLine("How many pieces of Pastry would you like?");
+    //   string stringUserInputPastry = Console.ReadLine();
+    //   int userInputPastry = int.Parse(stringUserInputPastry);
+    //   int totalPastryPrice = SetPastryPrice(userInputPastry);
+    //   Console.WriteLine("That will be $" + totalPastryPrice + ".");
+    // }
   }
   }
