@@ -50,6 +50,9 @@ namespace Bakery.Models
       {
           PastryPrice = (userInputPastry * PastryPrice) - 1;
       }
+      else{
+        PastryPrice = PastryPrice * userInputPastry;
+      }
       return PastryPrice;
     }
     // public void CalculatePastryPrice()
