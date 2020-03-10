@@ -16,7 +16,7 @@ namespace Bakery.Models
 
       if(userInputBread >=3 )
       {
-        BreadPrice = userInputBread * 2/3 * BreadPrice;
+        BreadPrice = (userInputBread - (userInputBread/3))* BreadPrice;
       }
       
       return BreadPrice;
