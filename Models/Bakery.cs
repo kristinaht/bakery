@@ -14,7 +14,7 @@ namespace Bakery.Models
     public int SetBreadPrice(int userInputBread)
     {
 
-      if(userInputBread >=3 )
+      if(userInputBread >=2 )
       {
         BreadPrice = (userInputBread - (userInputBread/3))* BreadPrice;
       }
@@ -36,13 +36,14 @@ namespace Bakery.Models
     public  int SetPastryPrice(int userInputPastry)
     {
       // PastryPrice = 2;
-      if(userInputPastry == 3 )
-      {
-          PastryPrice = (userInputPastry * PastryPrice) - 1;
-      }
-      else{
-        PastryPrice = PastryPrice * userInputPastry;
-      }
+      // if(userInputPastry == 3 )
+      // {
+      //     PastryPrice = (userInputPastry * PastryPrice) - 1;
+      // }
+      // else{
+      //   PastryPrice = PastryPrice * userInputPastry;
+      // }
+      PastryPrice = (userInputPastry / 3) * 5 + userInputPastry % 3 * 2;
       return PastryPrice;
     }
   }
