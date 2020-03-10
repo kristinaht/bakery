@@ -9,6 +9,7 @@ namespace Bakery
 		{
 			Bread newBread = new Bread(5);
 			Pastry newPastry = new Pastry(2, "croissant");
+			WelcomeMessage();
 			MainMenu();
 			string userInputMainPage = Console.ReadLine();
 			string userInputMainPageLower = userInputMainPage.ToLower();
@@ -54,7 +55,7 @@ namespace Bakery
 			}
 
 		}
-		public static void MainMenu()
+		public static void WelcomeMessage()
 		{
 			Console.BackgroundColor = ConsoleColor.DarkGray;
 			Console.ForegroundColor = ConsoleColor.Yellow;
@@ -64,6 +65,10 @@ namespace Bakery
 			Item      	Price
 			Bread		$5
 			Pastry		$2");
+		}
+
+		public static void MainMenu()
+		{
 			// Console.ResetColor();
 			Console.WriteLine(@"
 			What would you like today?
@@ -74,7 +79,7 @@ namespace Bakery
 
 		public static void AnythingElse()
 		{
-			Console.WriteLine("Would that be all for you today?");
+			Console.WriteLine("Would that be all for you today? [Y]/[N]");
 			string yesNo = Console.ReadLine();
 			string yesNoLower = yesNo.ToLower();
 			if(yesNoLower == "y")
